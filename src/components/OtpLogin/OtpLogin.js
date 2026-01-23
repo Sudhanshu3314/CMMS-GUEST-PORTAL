@@ -145,7 +145,7 @@ const OtpLogin = () => {
 
                 <div className="text-center mb-8">
                     <Title level={3} className="text-gray-800 mb-2">
-                        {step === "email" ? "Welcome to IGIDR 👋" : "Verify Your Identity 🪪"}
+                        {step === "email" ? "Welcome to IGIDR 👋 For Guest Login" : "Verify Your Identity 🪪"}
                     </Title>
                     <Text type="secondary" className="text-sm">
                         {step === "email"
