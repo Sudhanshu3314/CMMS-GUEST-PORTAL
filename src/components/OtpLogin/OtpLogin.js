@@ -240,7 +240,7 @@ const OtpLogin = () => {
                                     className="text-center mt-6"
                                 >
                                     <Link
-                                        to={"https://igidr-cmmg.netlify.app/"}
+                                        to={"https://igidr-cmms.netlify.app/"}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="
