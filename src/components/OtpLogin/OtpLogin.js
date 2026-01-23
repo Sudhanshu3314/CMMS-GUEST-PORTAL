@@ -208,12 +208,20 @@ const OtpLogin = () => {
                                     rules={[
                                         { required: true, message: "Email is required" },
                                         { type: "email", message: "Enter a valid email address" },
+                                        {
+                                            validator: (_, value) => {
+                                                if (!value) return Promise.resolve();
+                                                return value.endsWith("@igidr.ac.in")
+                                                    ? Promise.resolve()
+                                                    : Promise.reject(new Error("Use your IGIDR email (@igidr.ac.in)"));
+                                            },
+                                        },
                                     ]}
                                 >
                                     <Input
                                         size="large"
                                         prefix={<MailOutlined className="text-gray-400" />}
-                                        placeholder="Enter your email-id......."
+                                        placeholder="yourname@igidr.ac.in"
                                         className="rounded-xl border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
                                     />
                                 </Form.Item>
