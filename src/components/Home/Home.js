@@ -33,7 +33,7 @@ const Home = () => {
             try {
                 setLoading(true);
                 const res = await fetch(
-                    `https://cmms-backends.vercel.app/menu/${day}`
+                    `${process.env.REACT_APP_MENU_BACKEND}/menu/${day}`
                 );
                 const data = await res.json();
 
